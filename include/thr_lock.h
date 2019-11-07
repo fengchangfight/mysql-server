@@ -41,6 +41,9 @@ extern mysql_mutex_t THR_LOCK_lock;
 
 struct THR_LOCK;
 
+/**fc comment:
+* 关键字extern用来声明变量或者函数是一个外部变量或者外部函数，也就是说告诉编译器是在其他文件中定义的，编译的时候不要报错，在链接的时候按照字符串寻址可以找到这个变量或者函数。（函数默认是外部类型的，不需要显示声明，但是变量必须，如果想把一个函数声明为只在本文件范围有效，那么可以用static来说明
+*/
 extern ulong locks_immediate, locks_waited;
 
 /*
